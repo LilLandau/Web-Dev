@@ -1,0 +1,30 @@
+.home-container {
+    margin: auto;
+    width: 100%;
+    height: 85vh;
+    padding: 20px 30px;
+    position: relative;
+    background-image: url("../../assets/1207488.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-container::before { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); 
+}
+
+.title {
+    text-align: center;
+    font-size: 80px;
+    color: #EEEEEE;
+    padding: 150px 0;
+    position: relative; 
+    z-index: 1;
+}

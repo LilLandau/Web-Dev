@@ -1,0 +1,21 @@
+<h1>Albums</h1>
+<div class="albums-container" *ngIf="loaded">
+  <div class="card" *ngFor="let album of albums">
+    <a [routerLink]="['/album', album.id]" class="card-id">
+      ID: {{ album.id }}
+    </a>
+    <button (click)="deletePost(album.id)">Delete</button>
+  </div>
+</div>
+
+<fieldset>
+  <input type="text" #albumTitle placeholder="Album Title">
+  <input type="number" #albumUserId placeholder="User ID">
+  <button (click)="addAlbum(albumTitle.value, albumUserId.valueAsNumber)">Add Album</button>
+</fieldset>
+
+
+
+<ng-template #loading>
+  <p>Posts are loading...</p>
+</ng-template>
